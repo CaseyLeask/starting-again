@@ -4,8 +4,7 @@
   "description": "A universal javascript app starting from nothing",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build:server && node server/bundle.js",
-    "build:server": "webpack -p --config server/webpack.config.js"
+    "dev": "nodemon server/index.js --exec babel-node"
   },
   "repository": {
     "type": "git",
@@ -19,9 +18,11 @@
   },
   "homepage": "https://github.com/CaseyLeask/starting-again#readme",
   "devDependencies": {
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.20.0",
     "babel-loader": "^6.2.9",
     "babel-preset-latest": "^6.16.0",
+    "nodemon": "^1.11.0",
     "webpack": "^2.1.0-beta"
   },
   "dependencies": {
