@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "A universal javascript app starting from nothing",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CaseyLeask/starting-again.git"
