@@ -1,0 +1,17 @@
+{
+  "name": "starting-again",
+  "version": "0.0.1",
+  "description": "A universal javascript app starting from nothing",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaseyLeask/starting-again.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CaseyLeask/starting-again/issues"
+  },
+  "homepage": "https://github.com/CaseyLeask/starting-again#readme"
+}
