@@ -1,4 +1,5 @@
-const http = require('http');
+import http from 'http';
+import App from '../app';
 
 const renderPage = (content) => {
   return `
@@ -16,7 +17,7 @@ const renderPage = (content) => {
 };
 
 const server = http.createServer((req, res) => {
-  res.write(renderPage('Hello World'));
+  res.write(renderPage(App));
   res.end();
 });
 server.on('clientError', (err, socket) => {
