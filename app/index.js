@@ -1,1 +1,4 @@
-export default "Hello World";
+import React from 'react';
+
+export default (props) =>
+  <p>Hello World</p>;
