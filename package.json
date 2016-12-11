@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build:server && node server/bundle.js",
-    "build:server": "webpack --config server/webpack.config.js"
+    "build:server": "webpack -p --config server/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,9 @@
     "babel-loader": "^6.2.9",
     "babel-preset-latest": "^6.16.0",
     "webpack": "^2.1.0-beta"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "json-loader": "^0.5.4"
   }
 }

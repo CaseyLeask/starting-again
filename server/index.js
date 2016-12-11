@@ -1,4 +1,4 @@
-import http from 'http';
+import Express from 'express';
 import App from '../app';
 
 const renderPage = (content) => {
@@ -16,11 +16,12 @@ const renderPage = (content) => {
     `
 };
 
-const server = http.createServer((req, res) => {
-  res.write(renderPage(App));
-  res.end();
-});
-server.on('clientError', (err, socket) => {
-  socket.end('HTTP/1.1 400 Bad Request\r\n\r\n');
-});
-server.listen(8000);
+const app = Express()
+
+app.get('/', function (req, res) {
+    res.send(renderPage(App));
+})
+
+app.listen(8000, function () {
+    console.log('app listening on port 8000');
+})
