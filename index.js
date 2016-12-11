@@ -1,14 +1,25 @@
 const http = require('http');
-const fs = require('fs');
+
+const renderPage = (content) => {
+  return `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    </head>
+    <body>
+    ${content}
+    </body>
+    </html>
+    `
+};
 
 const server = http.createServer((req, res) => {
-  fs.readFile('./index.html', (err, data) => {
-    if (err) throw err;
-    res.write(data);
-    res.end();
-  });
+  res.write(renderPage('Hello World'));
+  res.end();
 });
 server.on('clientError', (err, socket) => {
-    socket.end('HTTP/1.1 400 Bad Request\r\n\r\n');
+  socket.end('HTTP/1.1 400 Bad Request\r\n\r\n');
 });
 server.listen(8000);
